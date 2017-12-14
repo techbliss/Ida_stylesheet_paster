@@ -1,0 +1,358 @@
+/*
+    qmc2-black: v0.10, 11-JAN-2011, rene.reucher@batcom-it.net
+
+    Qt style sheet compatible with QMC2 0.2.b10+
+
+    http://qmc2.arcadehits.net/wordpress/style-sheets/
+
+    Changes:
+    
+    v0.10 - updated to 0.2.b19
+    v0.9  - updated to 0.2.b17
+    v0.8  - transparent black backgrounds for all labels for better readability
+    v0.7  - some minor visible improvements, mainly tool bar & menu bar
+    v0.6  - general improvement (and a nicer background image)
+    v0.5  - updated to 0.2.b15
+    v0.4  - updated to 0.2.b12
+    v0.3  - updated to 0.2.b11
+    v0.2  - corrected button resize issues
+    v0.1  - initial version
+*/
+
+QWidget {
+  color: lightgrey;
+  background-color: black;
+}
+
+QDialog,
+QWebView,
+QMainWindow,
+Options,
+QSplitter,
+QScrollArea,
+QScrollArea *,
+Preview,
+Flyer,
+Cabinet,
+Title,
+Marquee,
+Controller,
+PCB {
+    background-color: black;
+    background-image: url(main-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content;
+    background-attachment: fixed;
+}
+
+QTabWidget {
+    background-color: black;
+    background-image: url(main-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-origin: content;
+    background-attachment: fixed;
+    color: darkgrey;
+    border: 1px solid gray;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+QTabBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(128, 128, 128), stop:1 rgb(30, 30, 30));
+}
+
+About,
+ROMStatusExporter,
+DemoModeDialog,
+QGroupBox#groupBoxAvailableDetails,
+QGroupBox#groupBoxActiveDetails,
+DetailSetup,
+QGroupBox#groupBoxIconsAndCabinetArt,
+QGroupBox#groupBoxPreviewsAndTitles,
+MawsQuickDownloadSetup {
+    background-color: black;
+    background: black;
+}
+
+QLabel#labelProjectInfo {
+    background-color: black;
+    background-image: url(about-bg.png);
+    background-position: center;
+    background-repeat: repeat-x;
+    background-origin: content;
+    background-attachment: fixed;
+}
+
+QLabel, QCheckBox, QRadioButton, QGroupBox {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 50%), stop:1 rgba(0, 0, 0, 0%));
+}
+
+QMenuBar {
+    background-color: black;
+    background: url(menu-bg.png);
+    background-position: center;
+    background-repeat: repeat-xy;
+    background-origin: content;
+    background-attachment: fixed;
+}
+
+QToolBar {
+    background-color: black;
+    background: url(menu-bg.png);
+    background-position: center;
+    background-repeat: repeat-xy;
+    background-origin: content;
+    background-attachment: fixed;
+}
+
+QToolBar::handle:top, QToolBar::handle:bottom {
+    background-color: black;
+    background: url(toolbar-handle.png);
+}
+
+QToolBar::handle:left, QToolBar::handle:right {
+    background-color: black;
+    background: url(toolbar-handle-rotated.png);
+}
+
+QMenuBar:item {
+    background-color: black;
+    background: rgba(0, 0, 0, 128);
+}
+
+QMenuBar:item:selected {
+    background-color: lightgrey;
+    background: lightgrey;
+    color: black; 
+}
+
+QLabel#labelGamelistStatus {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgba(50, 50, 50, 64), stop:0.5 rgba(128, 128, 128, 128), stop:1 rgba(50, 50, 50, 64));
+}
+
+QLabel#labelGameStatus {
+    background: none;
+}
+
+QLabel#labelLoadingGamelist,
+QLabel#labelLoadingHierarchy,
+QLabel#labelCreatingCategoryView,
+QLabel#labelCreatingVersionView,
+QListWidget#listWidgetFavorites,
+QListWidget#listWidgetPlayed,
+QListWidget#listWidgetSearch,
+QTreeWidget#treeWidgetCategoryView,
+QTreeWidget#treeWidgetVersionView,
+QTreeWidget#treeWidgetGamelist,
+QTreeWidget#treeWidgetHierarchy {
+    border-image: url(gamelist-bg.png) repeat;
+}
+
+QTreeView,
+QListView,
+QTableWidget,
+QLineEdit,
+QTextBrowser,
+QPlainTextEdit,
+QSpinBox,
+QDoubleSpinBox,
+QComboBox,
+QMenu {
+    selection-color: black; 
+    selection-background-color: lightgrey;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 black, stop: 1 rgb(128, 128, 128));
+    min-width: 14px;
+    min-height: 14px;
+    border: 1px solid gray;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+QPushButton,
+QToolButton {
+    selection-color: black; 
+    selection-background-color: white;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 black, stop: 1 rgb(128, 128, 128));
+    border: 1px solid gray;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+QPushButton:hover,
+QToolButton:hover {
+    background: black;
+}
+
+QPushButton:pressed,
+QToolButton:pressed,
+QPushButton:on,
+QToolButton:on {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgb(50, 50, 50), stop:1 black);
+}
+
+QToolButton[flat=true], QToolButton[flat=true]:hover {
+    border: 0px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 black, stop:1 rgb(222, 222, 222));
+}
+
+QCheckBox::indicator {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgb(222, 222, 222), stop:1 black);
+    width: 14px;
+    height: 14px;
+    border: 1px solid gray;
+    padding: 1px;
+    border-radius: 3px;
+}
+
+QCheckBox::indicator:checked {
+    image: url(ok.png);
+}
+
+QRadioButton::indicator {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgb(222, 222, 222), stop:1 black);
+    width: 7px;
+    height: 7px;
+    border: 1px solid gray;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+QRadioButton::indicator:checked {
+    background:  qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgb(111, 111, 111), stop:1 black);
+    width: 7px;
+    height: 7px;
+    border: 1px solid gray;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+QListView::item:hover,
+QTreeView::item:hover,
+QMenu::item:selected,
+QScrollBar,
+QProgressBar {
+    background-color: rgb(180, 180, 180, 75%);
+    color: black;
+}
+
+QHeaderView {
+    background: rgb(30, 30, 30);
+    color: lightgrey;
+}
+
+QRadioButton:hover,
+QCheckBox:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgba(180, 180, 180, 192), stop:1 rgb(50, 50, 50, 192));
+    color: black;
+}
+
+QToolTip {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgb(100, 100, 100), stop:1 rgb(50, 50, 50));
+    color: lightgrey;
+    border: 1px solid gray;
+    padding: 2px;
+    border-radius: 3px;
+    opacity: 192; /* with an active composition manager, this should look semi-transparent */
+}
+
+QSplitter::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgb(100, 100, 100), stop:1 rgb(20, 20, 20));
+    border: 1px solid rgb(50, 50, 50);
+    width: 2px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+QSplitter::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 rgb(100, 100, 100), stop:1 rgb(20, 20, 20));
+}
+
+QProgressBar:horizontal {
+    border: 1px solid gray;
+    border-radius: 3px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 black, stop:1 rgb(222, 222, 222));
+    padding: 0px;
+    text-align: center;
+}
+
+QProgressBar:vertical {
+    border: 1px solid gray;
+    border-radius: 3px;
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 black, stop:1 rgb(222, 222, 222));
+    padding: 0px;
+    text-align: center;
+}
+
+QProgressBar::chunk:horizontal {
+    background-color: rgb(162, 162, 162);
+    width: 1px;
+}
+
+QProgressBar::chunk:vertical {
+    background-color: rgb(162, 162, 162);
+    height: 1px;
+}
+
+QProgressBar:disabled {
+    color: white;
+}
+
+QHeaderView::down-arrow {
+    image: url(down-arrow.png);
+}
+
+QHeaderView::up-arrow {
+    image: url(up-arrow.png);
+}
+
+QTreeView {
+    alternate-background-color: rgba(128, 128, 128, 75%);
+    paint-alternating-row-colors-for-empty-area: true;
+    show-decoration-selected: 0;
+}
+
+QTreeView::branch:has-siblings:!adjoins-item {
+    border-image: url(vline.png) 0;
+}
+
+QTreeView::branch:has-siblings:adjoins-item {
+    border-image: url(branch-more.png) 0;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+    border-image: url(branch-end.png) 0;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+    border-image: none;
+    image: url(branch-closed.png);
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings {
+    border-image: none;
+    image: url(branch-open.png);
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid #999999;
+    height: 8px;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 black, stop:1 rgb(222, 222, 222));
+    margin: 2px 0;
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 rgb(162, 162, 162), stop:1 rgb(222, 222, 222));
+    border: 1px solid #5c5c5c;
+    width: 20px;
+    margin: -2px 0;
+    border-radius: 3px;
+}
+
+QMessageBox {
+    messagebox-text-interaction-flags: 5 /* text can be selected and copied to clipboard */
+}
+
